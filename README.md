@@ -1,1 +1,1 @@
-# Euler
+# Project Euler Programs
