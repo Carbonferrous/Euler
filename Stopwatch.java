@@ -34,14 +34,16 @@ class Stopwatch
 	public String toString()
 	{
 		String output = "";
+		long pointTime = 0;
 		for(int x=0;x<watch.size()-1;x++)
 		{
-			long pointTime = watch.get(x+1).getTime()-watch.get(x).getTime();
+			pointTime = watch.get(x+1).getTime()-watch.get(x).getTime();
 			output += pointName.get(x)+": "+(pointTime/1000)+"."+(pointTime%1000)+" seconds\n";
 		}
-		long pointTime = (new Date()).getTime()-watch.get(watch.size()-1).getTime();
-		output += pointName.get(watch.size()-1)+": "+(pointTime/1000)+"."+(pointTime%1000)+" seconds";
-		
+		pointTime = (new Date()).getTime()-watch.get(watch.size()-1).getTime();
+		output += pointName.get(watch.size()-1)+": "+(pointTime/1000)+"."+(pointTime%1000)+" seconds\n";
+		pointTime = (new Date()).getTime()-watch.get(0).getTime();
+		output += "Total Time: " + (pointTime/1000)+"."+(pointTime%1000)+" seconds";
 		return output;
 	}
 }

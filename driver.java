@@ -9,11 +9,14 @@ public class driver
 {
 	public static void main(String args[]) throws IOException
 	{
+		String result = "05233";
+		out.println((new StringBuilder(result)).reverse());
+		out.println(Integer.parseInt((new StringBuilder(result)).reverse().toString())==33250);
 //		Stopwatch foo = new Stopwatch("Create Sequence");
 //		ArrayList<Fraction> farey = Fraction.fareySeq(12000);
 //		out.println(farey.size()-2);
 //		out.println(foo);
-		out.println(NumberTheory.divisors(new BigInteger("600851475143")));
+//		out.println(NumberTheory.divisors(new BigInteger("600851475143")));
 //		****************************PRIME AND STOPWATCH TESTER**********************
 //		Stopwatch foo = new Stopwatch("Create Prime List");
 //		ArrayList<BigInteger> primeList = NumberTheory.primeList(50000000);
